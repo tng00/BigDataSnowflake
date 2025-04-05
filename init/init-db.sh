@@ -6,7 +6,7 @@ psql --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" -f /docker-entrypoint-i
 
 echo "Импорт всех CSV-файлов в mock_data..."
 
-for file in /docker-entrypoint-initdb.d/data/MOCK_DATA*.csv; do
+for file in /docker-entrypoint-initdb.d/исходные\ данные/MOCK_DATA*.csv; do
   if [ -f "$file" ]; then
     echo "Импорт файла: $file"
     psql --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" \
